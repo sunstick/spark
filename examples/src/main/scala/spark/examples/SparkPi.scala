@@ -1,14 +1,13 @@
 package spark.examples
 
-import java.lang.System
-import scala.math.random
 import spark._
-import SparkContext._
+
+import scala.math.random
 
 object SparkPi {
   def main(args: Array[String]) {
     if (args.length == 0) {
-      System.err.println("Usage: SparkPi <host> [<slices>]")
+      System.err.println("Usage: SparkPi <host> [<slices>], default slice is 2")
       System.exit(1)
     }
     
