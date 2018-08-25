@@ -1,5 +1,7 @@
 package spark
 
+import spark.rdd.RDD
+
 class Stage(
     val id: Int,
     val rdd: RDD[_],

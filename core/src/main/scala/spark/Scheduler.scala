@@ -1,5 +1,7 @@
 package spark
 
+import spark.rdd.RDD
+
 /**
  * Scheduler trait, implemented by both MesosScheduler and LocalScheduler.
  */

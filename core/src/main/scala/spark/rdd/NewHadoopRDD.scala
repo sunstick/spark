@@ -1,11 +1,12 @@
-package spark
+package spark.rdd
+
+import java.text.SimpleDateFormat
+import java.util.Date
 
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.io.Writable
 import org.apache.hadoop.mapreduce._
-
-import java.util.Date
-import java.text.SimpleDateFormat
+import spark._
 
 class NewHadoopSplit(rddId: Int, val index: Int, @transient rawSplit: InputSplit with Writable)
   extends Split {

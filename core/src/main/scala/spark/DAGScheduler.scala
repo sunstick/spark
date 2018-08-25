@@ -2,7 +2,9 @@ package spark
 
 import java.util.concurrent.atomic.AtomicInteger
 
-import scala.collection.mutable.{ArrayBuffer, HashMap, HashSet, Queue, Map}
+import spark.rdd.RDD
+
+import scala.collection.mutable.{ArrayBuffer, HashMap, HashSet, Map, Queue}
 
 /**
  * A task created by the DAG scheduler. Knows its stage ID and map ouput tracker generation.

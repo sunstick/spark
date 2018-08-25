@@ -1,5 +1,7 @@
 package spark
 
+import spark.rdd.RDD
+
 import scala.collection.immutable.NumericRange
 import scala.collection.mutable.ArrayBuffer
 

@@ -2,15 +2,14 @@ package spark.bagel.examples
 
 import spark._
 import spark.SparkContext._
-
 import spark.bagel._
 import spark.bagel.Bagel._
 
-import scala.xml.{XML,NodeSeq}
-
+import scala.xml.{NodeSeq, XML}
 import scala.collection.mutable.ArrayBuffer
+import java.io.{DataInputStream, DataOutputStream, InputStream, OutputStream}
 
-import java.io.{InputStream, OutputStream, DataInputStream, DataOutputStream}
+import spark.rdd.RDD
 
 object WikipediaPageRankStandalone {
   def main(args: Array[String]) {

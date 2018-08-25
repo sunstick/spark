@@ -1,7 +1,9 @@
-package spark
+package spark.rdd
 
 import java.io.PrintWriter
 import java.util.StringTokenizer
+
+import spark._
 
 import scala.collection.JavaConversions._
 import scala.collection.mutable.ArrayBuffer

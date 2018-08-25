@@ -1,10 +1,8 @@
-package spark
+package spark.rdd
 
-import java.net.URL
-import java.io.EOFException
-import java.io.ObjectInputStream
-import scala.collection.mutable.ArrayBuffer
-import scala.collection.mutable.HashMap
+import spark._
+
+import scala.collection.mutable.{ArrayBuffer, HashMap}
 
 sealed trait CoGroupSplitDep extends Serializable
 case class NarrowCoGroupSplitDep(rdd: RDD[_], split: Split) extends CoGroupSplitDep

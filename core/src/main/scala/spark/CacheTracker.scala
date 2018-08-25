@@ -1,5 +1,7 @@
 package spark
 
+import spark.rdd.RDD
+
 import scala.actors._
 import scala.actors.Actor._
 import scala.actors.remote._

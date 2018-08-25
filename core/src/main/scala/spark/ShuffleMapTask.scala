@@ -6,6 +6,7 @@ import java.io.ObjectOutputStream
 import java.util.{HashMap => JHashMap}
 
 import it.unimi.dsi.fastutil.io.FastBufferedOutputStream
+import spark.rdd.RDD
 
 class ShuffleMapTask(
     runId: Int,

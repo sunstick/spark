@@ -1,6 +1,8 @@
-package spark
+package spark.rdd
 
 import java.util.{HashMap => JHashMap}
+
+import spark._
 
 class ShuffledRDDSplit(val idx: Int) extends Split {
   override val index = idx

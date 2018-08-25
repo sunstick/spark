@@ -4,7 +4,6 @@ import java.io._
 import java.util.concurrent.atomic.AtomicInteger
 
 import scala.actors.remote.RemoteActor
-
 import org.apache.hadoop.fs.Path
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.mapred.InputFormat
@@ -22,14 +21,13 @@ import org.apache.hadoop.io.Text
 import org.apache.hadoop.mapred.FileInputFormat
 import org.apache.hadoop.mapred.JobConf
 import org.apache.hadoop.mapred.TextInputFormat
-
 import org.apache.hadoop.mapreduce.{InputFormat => NewInputFormat}
 import org.apache.hadoop.mapreduce.lib.input.{FileInputFormat => NewFileInputFormat}
 import org.apache.hadoop.mapreduce.{Job => NewHadoopJob}
-
 import org.apache.mesos.MesosNativeLibrary
-
 import spark.broadcast._
+import spark.rdd._
+
 import collection.generic.Growable
 
 class SparkContext(
@@ -381,14 +379,7 @@ object SparkContext {
   }
 
   // TODO: Add AccumulatorParams for other types, e.g. lists and strings
-  implicit def rddToPairRDDFunctions[K: ClassManifest, V: ClassManifest](rdd: RDD[(K, V)]) =
-    new PairRDDFunctions(rdd)
 
-  implicit def rddToSequenceFileRDDFunctions[K <% Writable: ClassManifest, V <% Writable: ClassManifest](rdd: RDD[(K, V)]) =
-    new SequenceFileRDDFunctions(rdd)
-
-  implicit def rddToOrderedRDDFunctions[K <% Ordered[K]: ClassManifest, V: ClassManifest](rdd: RDD[(K, V)]) =
-    new OrderedRDDFunctions(rdd)
 
   // Implicit conversions to common Writable types, for saveAsSequenceFile
 

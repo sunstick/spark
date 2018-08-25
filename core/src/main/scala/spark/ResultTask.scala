@@ -1,5 +1,7 @@
 package spark
 
+import spark.rdd.RDD
+
 class ResultTask[T, U](
     runId: Int,
     stageId: Int, 

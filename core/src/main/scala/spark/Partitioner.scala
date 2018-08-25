@@ -1,5 +1,7 @@
 package spark
 
+import spark.rdd.RDD
+
 abstract class Partitioner extends Serializable {
   def numPartitions: Int
   def getPartition(key: Any): Int
