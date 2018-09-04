@@ -1,8 +1,7 @@
-package spark
+package spark.rdd
 
-import org.scalatest.FunSuite
-import org.scalatest.BeforeAndAfter
-import SparkContext._
+import org.scalatest.{BeforeAndAfter, FunSuite}
+import spark.SparkContext
 
 class PipedRDDSuite extends FunSuite with BeforeAndAfter {
   

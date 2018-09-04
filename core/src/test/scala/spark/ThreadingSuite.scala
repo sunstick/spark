@@ -1,13 +1,9 @@
 package spark
 
 import java.util.concurrent.Semaphore
-import java.util.concurrent.atomic.AtomicBoolean
-import java.util.concurrent.atomic.AtomicInteger
+import java.util.concurrent.atomic.{AtomicBoolean, AtomicInteger}
 
-import org.scalatest.FunSuite
-import org.scalatest.BeforeAndAfter
-
-import SparkContext._
+import org.scalatest.{BeforeAndAfter, FunSuite}
 
 /**
  * Holds state shared across task threads in some ThreadingSuite tests.

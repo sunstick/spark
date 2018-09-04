@@ -1,7 +1,7 @@
 package spark
 
 import spark.internal.Logging
-import spark.rdd.RDD
+import spark.rdd.{RDD, Split}
 
 import scala.actors._
 import scala.actors.Actor._

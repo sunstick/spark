@@ -1,9 +1,9 @@
-package spark
+package spark.rdd
+
+import org.scalatest.{BeforeAndAfter, FunSuite}
+import spark.SparkContext
 
 import scala.collection.mutable.HashMap
-import org.scalatest.FunSuite
-import org.scalatest.BeforeAndAfter
-import SparkContext._
 
 class RDDSuite extends FunSuite with BeforeAndAfter {
   
