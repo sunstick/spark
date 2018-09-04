@@ -5,8 +5,8 @@ import java.net.URL
 
 import scala.collection.mutable.ArrayBuffer
 import scala.collection.mutable.HashMap
-
 import it.unimi.dsi.fastutil.io.FastBufferedInputStream
+import spark.internal.Logging
 
 class SimpleShuffleFetcher extends ShuffleFetcher with Logging {
   def fetch[K, V](shuffleId: Int, reduceId: Int, func: (K, V) => Unit) {

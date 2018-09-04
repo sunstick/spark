@@ -3,6 +3,8 @@ package spark
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicInteger
 
+import spark.internal.Logging
+
 /**
  * A simple Scheduler implementation that runs tasks locally in a thread pool. Optionally the 
  * scheduler also allows each task to fail up to maxFailures times, which is useful for testing

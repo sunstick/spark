@@ -6,8 +6,8 @@ import java.util.{Comparator, PriorityQueue, Random, UUID}
 
 import scala.collection.mutable.{Map, Set}
 import scala.math
-
 import spark._
+import spark.internal.Logging
 
 class ChainedBroadcast[T](@transient var value_ : T, isLocal: Boolean)
 extends Broadcast[T] with Logging with Serializable {

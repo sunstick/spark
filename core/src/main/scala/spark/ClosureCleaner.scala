@@ -1,13 +1,11 @@
 package spark
 
-import java.lang.reflect.Field
-
-import scala.collection.mutable.Map
-import scala.collection.mutable.Set
-
-import org.objectweb.asm.{ClassReader, MethodVisitor, Type}
-import org.objectweb.asm.commons.EmptyVisitor
 import org.objectweb.asm.Opcodes._
+import org.objectweb.asm.commons.EmptyVisitor
+import org.objectweb.asm.{ClassReader, MethodVisitor, Type}
+import spark.internal.Logging
+
+import scala.collection.mutable.{Map, Set}
 
 object ClosureCleaner extends Logging {
   // Get an ASM class reader for a given class from the JAR that loaded it

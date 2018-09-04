@@ -9,6 +9,7 @@ import org.apache.hadoop.mapred.{Partitioner => _, _}
 import org.apache.hadoop.mapreduce.lib.output.{FileOutputFormat => NewFileOutputFormat}
 import org.apache.hadoop.mapreduce.{HadoopMapReduceUtil, TaskAttemptID, Job => NewAPIHadoopJob, OutputFormat => NewOutputFormat, RecordWriter => NewRecordWriter}
 import spark._
+import spark.internal.Logging
 
 import scala.collection.mutable.{ArrayBuffer, HashMap, Map}
 

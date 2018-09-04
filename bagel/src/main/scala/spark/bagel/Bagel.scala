@@ -2,6 +2,7 @@ package spark.bagel
 
 import spark._
 import spark.SparkContext._
+import spark.internal.Logging
 import spark.rdd.RDD
 
 import scala.collection.mutable.ArrayBuffer

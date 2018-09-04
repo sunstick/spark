@@ -2,6 +2,8 @@ package spark
 
 import java.io._
 
+import spark.internal.Logging
+
 /**
  * Wrapper around a BoundedMemoryCache that stores serialized objects as byte arrays in order to 
  * reduce storage cost and GC overhead

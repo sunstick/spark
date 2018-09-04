@@ -3,6 +3,7 @@ package spark.broadcast
 import java.util.BitSet
 
 import spark._
+import spark.internal.Logging
 
 /**
  * Used to keep and pass around information of peers involved in a broadcast

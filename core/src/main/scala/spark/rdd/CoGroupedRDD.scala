@@ -1,6 +1,7 @@
 package spark.rdd
 
 import spark._
+import spark.internal.Logging
 
 import scala.collection.mutable.{ArrayBuffer, HashMap}
 

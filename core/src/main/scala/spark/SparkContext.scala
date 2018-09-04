@@ -26,6 +26,7 @@ import org.apache.hadoop.mapreduce.lib.input.{FileInputFormat => NewFileInputFor
 import org.apache.hadoop.mapreduce.{Job => NewHadoopJob}
 import org.apache.mesos.MesosNativeLibrary
 import spark.broadcast._
+import spark.internal.Logging
 import spark.rdd._
 
 import collection.generic.Growable

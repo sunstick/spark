@@ -9,11 +9,12 @@ import java.util.Random
 
 import javax.management.MBeanServer
 import java.lang.management.ManagementFactory
+
 import com.sun.management.HotSpotDiagnosticMXBean
 
 import scala.collection.mutable.ArrayBuffer
-
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet
+import spark.internal.Logging
 
 /**
  * Estimates the sizes of Java objects (number of bytes of memory they occupy), for use in 

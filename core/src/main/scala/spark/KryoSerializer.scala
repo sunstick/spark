@@ -6,11 +6,11 @@ import java.nio.channels.Channels
 
 import scala.collection.immutable
 import scala.collection.mutable
-
 import com.esotericsoftware.kryo._
 import com.esotericsoftware.kryo.{Serializer => KSerializer}
 import com.esotericsoftware.kryo.serialize.ClassSerializer
 import de.javakaffee.kryoserializers.KryoReflectionFactorySupport
+import spark.internal.Logging
 
 /**
  * Zig-zag encoder used to write object sizes to serialization streams.

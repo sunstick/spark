@@ -2,7 +2,7 @@ package spark.rdd
 
 import org.apache.hadoop.io.Writable
 import org.apache.hadoop.mapred.SequenceFileOutputFormat
-import spark.Logging
+import spark.internal.Logging
 
 /**
  * Extra functions available on RDDs of (key, value) pairs to create a Hadoop SequenceFile,

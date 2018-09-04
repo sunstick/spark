@@ -4,11 +4,10 @@ import java.util.{HashMap => JHashMap}
 
 import scala.collection.mutable.ArrayBuffer
 import scala.collection.mutable.HashMap
-
 import com.google.protobuf.ByteString
-
 import org.apache.mesos._
 import org.apache.mesos.Protos._
+import spark.internal.Logging
 
 /**
  * A Job that runs a set of tasks with no interdependencies.

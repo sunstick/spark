@@ -2,6 +2,8 @@ package spark
 
 import java.util.LinkedHashMap
 
+import spark.internal.Logging
+
 /**
  * An implementation of Cache that estimates the sizes of its entries and attempts to limit its
  * total memory usage to a fraction of the JVM heap. Objects' sizes are estimated using

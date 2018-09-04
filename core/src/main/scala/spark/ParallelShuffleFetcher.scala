@@ -1,18 +1,14 @@
 package spark
 
-import java.io.ByteArrayInputStream
-import java.io.EOFException
+import java.io.{ByteArrayInputStream, EOFException}
 import java.net.URL
-import java.util.concurrent.LinkedBlockingQueue
-import java.util.concurrent.TimeUnit
-import java.util.concurrent.atomic.AtomicBoolean
-import java.util.concurrent.atomic.AtomicInteger
+import java.util.concurrent.{LinkedBlockingQueue, TimeUnit}
 import java.util.concurrent.atomic.AtomicReference
 
-import scala.collection.mutable.ArrayBuffer
-import scala.collection.mutable.HashMap
-
 import it.unimi.dsi.fastutil.io.FastBufferedInputStream
+import spark.internal.Logging
+
+import scala.collection.mutable.{ArrayBuffer, HashMap}
 
 
 class ParallelShuffleFetcher extends ShuffleFetcher with Logging {

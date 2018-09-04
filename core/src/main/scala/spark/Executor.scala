@@ -6,13 +6,11 @@ import java.util.concurrent._
 
 import scala.actors.remote.RemoteActor
 import scala.collection.mutable.ArrayBuffer
-
 import com.google.protobuf.ByteString
-
 import org.apache.mesos._
 import org.apache.mesos.Protos._
-
 import spark.broadcast._
+import spark.internal.Logging
 
 /**
  * The Mesos executor for Spark.

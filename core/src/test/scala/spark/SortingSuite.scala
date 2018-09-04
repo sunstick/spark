@@ -4,6 +4,7 @@ import org.scalatest.FunSuite
 import org.scalatest.BeforeAndAfter
 import org.scalatest.matchers.ShouldMatchers
 import SparkContext._
+import spark.internal.Logging
 
 class SortingSuite extends FunSuite with BeforeAndAfter with ShouldMatchers with Logging {
   

@@ -1,5 +1,6 @@
 package spark
 
+import spark.internal.Logging
 import spark.rdd.RDD
 
 import scala.actors._

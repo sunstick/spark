@@ -1,7 +1,6 @@
-package spark
+package spark.internal
 
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
+import org.slf4j.{Logger, LoggerFactory}
 
 /**
  * Utility trait for classes that want to log data. Creates a SLF4J logger for the class and allows

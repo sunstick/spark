@@ -6,8 +6,8 @@ import java.util.{Comparator, Random, UUID}
 
 import scala.collection.mutable.{ListBuffer, Map, Set}
 import scala.math
-
 import spark._
+import spark.internal.Logging
 
 class TreeBroadcast[T](@transient var value_ : T, isLocal: Boolean)
 extends Broadcast[T] with Logging with Serializable {

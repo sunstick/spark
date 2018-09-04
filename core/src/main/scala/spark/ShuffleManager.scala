@@ -6,8 +6,8 @@ import java.util.UUID
 import java.util.concurrent.atomic.AtomicLong
 
 import scala.collection.mutable.{ArrayBuffer, HashMap}
-
 import spark._
+import spark.internal.Logging
 
 class ShuffleManager extends Logging {
   private var nextShuffleId = new AtomicLong(0)

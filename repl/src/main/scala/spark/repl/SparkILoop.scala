@@ -7,23 +7,22 @@ package spark.repl
 
 import scala.tools.nsc._
 import scala.tools.nsc.interpreter._
+import Predef.{println => _, _}
+import java.io.{BufferedReader, FileReader, PrintWriter}
 
-import Predef.{ println => _, _ }
-import java.io.{ BufferedReader, FileReader, PrintWriter }
 import scala.sys.process.Process
 import session._
-import scala.tools.nsc.interpreter.{ Results => IR }
-import scala.tools.util.{ SignalManager, Signallable, Javap }
+import scala.tools.nsc.interpreter.{Results => IR}
+import scala.tools.util.{Javap, SignalManager, Signallable}
 import scala.annotation.tailrec
-import scala.util.control.Exception.{ ignoring }
+import scala.util.control.Exception.ignoring
 import scala.collection.mutable.ListBuffer
 import scala.concurrent.ops
-import util.{ ClassPath, Exceptional, stringFromWriter, stringFromStream }
+import util.{ClassPath, Exceptional, stringFromStream, stringFromWriter}
 import interpreter._
-import io.{ File, Sources }
-
-import spark.Logging
+import io.{File, Sources}
 import spark.SparkContext
+import spark.internal.Logging
 
 /** The Scala interactive shell.  It provides a read-eval-print loop
  *  around the Interpreter class.

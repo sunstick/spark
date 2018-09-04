@@ -6,6 +6,7 @@ import java.util.{BitSet, UUID}
 import java.util.concurrent.{Executors, ThreadFactory, ThreadPoolExecutor}
 
 import spark._
+import spark.internal.Logging
 
 trait Broadcast[T] extends Serializable {
   val uuid = UUID.randomUUID

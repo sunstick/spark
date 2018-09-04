@@ -2,6 +2,7 @@ package spark
 
 import java.util.concurrent.atomic.AtomicInteger
 
+import spark.internal.Logging
 import spark.rdd.RDD
 
 import scala.collection.mutable.{ArrayBuffer, HashMap, HashSet, Map, Queue}

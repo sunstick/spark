@@ -1,15 +1,14 @@
 package spark.broadcast
 
 import com.ning.compress.lzf.{LZFInputStream, LZFOutputStream}
-
 import java.io._
 import java.net._
 import java.util.UUID
 
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileSystem, Path, RawLocalFileSystem}
-
 import spark._
+import spark.internal.Logging
 
 class DfsBroadcast[T](@transient var value_ : T, isLocal: Boolean)
 extends Broadcast[T] with Logging with Serializable {

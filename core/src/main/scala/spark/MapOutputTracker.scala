@@ -2,6 +2,8 @@ package spark
 
 import java.util.concurrent.ConcurrentHashMap
 
+import spark.internal.Logging
+
 import scala.actors._
 import scala.actors.Actor._
 import scala.actors.remote._

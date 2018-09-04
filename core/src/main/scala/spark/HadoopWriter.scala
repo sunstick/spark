@@ -5,15 +5,14 @@ import org.apache.hadoop.fs.Path
 import org.apache.hadoop.util.ReflectionUtils
 import org.apache.hadoop.io.NullWritable
 import org.apache.hadoop.io.Text
-
 import java.text.SimpleDateFormat
 import java.text.NumberFormat
 import java.io.IOException
 import java.net.URI
 import java.util.Date
 
-import spark.Logging
 import spark.SerializableWritable
+import spark.internal.Logging
 
 /**
  * Saves an RDD using a Hadoop OutputFormat as specified by a JobConf. The JobConf should also 

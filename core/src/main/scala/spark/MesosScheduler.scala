@@ -12,12 +12,11 @@ import scala.collection.mutable.Map
 import scala.collection.mutable.PriorityQueue
 import scala.collection.JavaConversions._
 import scala.math.Ordering
-
 import com.google.protobuf.ByteString
-
 import org.apache.mesos.{Scheduler => MScheduler}
 import org.apache.mesos._
 import org.apache.mesos.Protos._
+import spark.internal.Logging
 
 /**
  * The main Scheduler implementation, which runs jobs on Mesos. Clients should first call start(),

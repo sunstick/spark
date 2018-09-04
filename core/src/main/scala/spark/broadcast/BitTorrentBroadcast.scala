@@ -7,8 +7,8 @@ import java.util.concurrent.atomic.AtomicInteger
 
 import scala.collection.mutable.{ListBuffer, Map, Set}
 import scala.math
-
 import spark._
+import spark.internal.Logging
 
 class BitTorrentBroadcast[T](@transient var value_ : T, isLocal: Boolean)
 extends Broadcast[T] with Logging with Serializable {
