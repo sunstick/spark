@@ -1,16 +1,16 @@
-package spark
+package spark.serializer
 
 import java.io._
 import java.nio.ByteBuffer
 import java.nio.channels.Channels
 
-import scala.collection.immutable
-import scala.collection.mutable
-import com.esotericsoftware.kryo._
-import com.esotericsoftware.kryo.{Serializer => KSerializer}
 import com.esotericsoftware.kryo.serialize.ClassSerializer
+import com.esotericsoftware.kryo.{Serializer => KSerializer, _}
 import de.javakaffee.kryoserializers.KryoReflectionFactorySupport
+import spark._
 import spark.internal.Logging
+
+import scala.collection.mutable
 
 /**
  * Zig-zag encoder used to write object sizes to serialization streams.

@@ -6,6 +6,7 @@ import java.util.NoSuchElementException
 import org.apache.hadoop.mapred._
 import org.apache.hadoop.util.ReflectionUtils
 import spark._
+import spark.serializer.SerializableWritable
 
 /** 
  * A Spark split class that wraps around a Hadoop InputSplit.

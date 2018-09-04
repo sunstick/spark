@@ -10,6 +10,7 @@ import org.apache.hadoop.mapreduce.lib.output.{FileOutputFormat => NewFileOutput
 import org.apache.hadoop.mapreduce.{HadoopMapReduceUtil, TaskAttemptID, Job => NewAPIHadoopJob, OutputFormat => NewOutputFormat, RecordWriter => NewRecordWriter}
 import spark._
 import spark.internal.Logging
+import spark.serializer.SerializableWritable
 
 import scala.collection.mutable.{ArrayBuffer, HashMap, Map}
 

@@ -1,12 +1,10 @@
 package spark
 
-import scala.collection.mutable
-import scala.collection.immutable
-
-import org.scalatest.FunSuite
 import com.esotericsoftware.kryo._
+import org.scalatest.FunSuite
+import spark.serializer.KryoSerializer
 
-import SparkContext._
+import scala.collection.mutable
 
 class KryoSerializerSuite extends FunSuite{
   
@@ -108,6 +106,9 @@ class KryoSerializerSuite extends FunSuite{
 }
 
 package test {
+
+  import spark.serializer.KryoRegistrator
+
   case class CaseClass(i: Int, s: String) {}
   
   class ClassWithNoArgConstructor {

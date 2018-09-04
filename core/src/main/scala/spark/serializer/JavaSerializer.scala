@@ -1,4 +1,4 @@
-package spark
+package spark.serializer
 
 import java.io._
 

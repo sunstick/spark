@@ -1,7 +1,5 @@
 package spark
 
-import java.io._
-
 import spark.internal.Logging
 
 /**

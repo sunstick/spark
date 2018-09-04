@@ -2,15 +2,14 @@ package spark.bagel.examples
 
 import spark._
 import spark.SparkContext._
-
 import spark.bagel._
 import spark.bagel.Bagel._
 
 import scala.collection.mutable.ArrayBuffer
-
-import java.io.{InputStream, OutputStream, DataInputStream, DataOutputStream}
+import java.io.{DataInputStream, DataOutputStream, InputStream, OutputStream}
 
 import com.esotericsoftware.kryo._
+import spark.serializer.KryoRegistrator
 
 class PageRankUtils extends Serializable {
   def computeWithCombiner(numVertices: Long, epsilon: Double)(

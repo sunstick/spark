@@ -1,18 +1,12 @@
 package org.apache.hadoop.mapred
 
-import org.apache.hadoop.fs.FileSystem
-import org.apache.hadoop.fs.Path
-import org.apache.hadoop.util.ReflectionUtils
-import org.apache.hadoop.io.NullWritable
-import org.apache.hadoop.io.Text
-import java.text.SimpleDateFormat
-import java.text.NumberFormat
 import java.io.IOException
-import java.net.URI
+import java.text.{NumberFormat, SimpleDateFormat}
 import java.util.Date
 
-import spark.SerializableWritable
+import org.apache.hadoop.fs.{FileSystem, Path}
 import spark.internal.Logging
+import spark.serializer.SerializableWritable
 
 /**
  * Saves an RDD using a Hadoop OutputFormat as specified by a JobConf. The JobConf should also 

@@ -1,9 +1,8 @@
-package spark
+package spark.serializer
 
 import java.io._
 
-import org.apache.hadoop.io.ObjectWritable
-import org.apache.hadoop.io.Writable
+import org.apache.hadoop.io.{ObjectWritable, Writable}
 import org.apache.hadoop.mapred.JobConf
 
 class SerializableWritable[T <: Writable](@transient var t: T) extends Serializable {

@@ -7,6 +7,7 @@ import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.io.Writable
 import org.apache.hadoop.mapreduce._
 import spark._
+import spark.serializer.SerializableWritable
 
 class NewHadoopSplit(rddId: Int, val index: Int, @transient rawSplit: InputSplit with Writable)
   extends Split {

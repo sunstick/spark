@@ -1,5 +1,7 @@
 package spark
 
+import spark.serializer.Serializer
+
 class SparkEnv (
   val cache: Cache,
   val serializer: Serializer,
@@ -25,11 +27,11 @@ object SparkEnv {
     val cacheClass = System.getProperty("spark.cache.class", "spark.BoundedMemoryCache")
     val cache = Class.forName(cacheClass).newInstance().asInstanceOf[Cache]
     
-    val serializerClass = System.getProperty("spark.serializer", "spark.JavaSerializer")
+    val serializerClass = System.getProperty("spark.serializer", "spark.serializer.JavaSerializer")
     val serializer = Class.forName(serializerClass, true, Thread.currentThread.getContextClassLoader).newInstance().asInstanceOf[Serializer]
 
     val closureSerializerClass =
-      System.getProperty("spark.closure.serializer", "spark.JavaSerializer")
+      System.getProperty("spark.closure.serializer", "spark.serializer.JavaSerializer")
     val closureSerializer =
       Class.forName(closureSerializerClass).newInstance().asInstanceOf[Serializer]
 

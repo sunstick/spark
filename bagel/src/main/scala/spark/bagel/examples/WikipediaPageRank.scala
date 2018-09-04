@@ -1,12 +1,9 @@
 package spark.bagel.examples
 
 import spark._
-import spark.SparkContext._
-
 import spark.bagel._
-import spark.bagel.Bagel._
 
-import scala.xml.{XML,NodeSeq}
+import scala.xml.{NodeSeq, XML}
 
 object WikipediaPageRank {
   def main(args: Array[String]) {
@@ -15,7 +12,7 @@ object WikipediaPageRank {
       System.exit(-1)
     }
 
-    System.setProperty("spark.serializer", "spark.KryoSerializer")
+    System.setProperty("spark.serializer", "spark.serializer.KryoSerializer")
     System.setProperty("spark.kryo.registrator", classOf[PRKryoRegistrator].getName)
 
     val inputFile = args(0)

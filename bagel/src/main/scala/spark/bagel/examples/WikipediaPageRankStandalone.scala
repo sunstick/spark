@@ -10,6 +10,7 @@ import scala.collection.mutable.ArrayBuffer
 import java.io.{DataInputStream, DataOutputStream, InputStream, OutputStream}
 
 import spark.rdd.RDD
+import spark.serializer.{DeserializationStream, SerializationStream, Serializer, SerializerInstance}
 
 object WikipediaPageRankStandalone {
   def main(args: Array[String]) {
@@ -111,7 +112,7 @@ object WikipediaPageRankStandalone {
   }
 }
 
-class WPRSerializer extends spark.Serializer {
+class WPRSerializer extends Serializer {
   def newInstance(): SerializerInstance = new WPRSerializerInstance()
 }
 
